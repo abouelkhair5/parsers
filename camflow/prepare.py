@@ -279,7 +279,7 @@ def parse_all_edges(inputfile, outputfile, node_map, noencode):
                         continue
                     else:
                         timestamp = used[uid]["cf:id"]
-		    if "prov:entity" not in used[uid]:
+                    if "prov:entity" not in used[uid]:
                         # an edge's source node must exist;
                         # if not, we will have to skip the
                         # edge. Log this issue if verbose is set.
@@ -345,7 +345,7 @@ def parse_all_edges(inputfile, outputfile, node_map, noencode):
                             output.write("{}\t{}\t{}:{}:{}:{}:{}\n".format(srcUUID, dstUUID, srcVal, dstVal, edgetype, timestamp, jiffies))
                         else:
                             output.write("{}\t{}\t{}:{}:{}:{}\n".format(srcUUID, dstUUID, srcVal, dstVal, edgetype, timestamp))
-		    else:
+                    else:
                         if CONSOLE_ARGUMENTS.stats:
                             output.write("{}\t{}\t{}:{}:{}:{}:{}\n".format(hashgen([srcUUID]), hashgen([dstUUID]), srcVal, dstVal, edgetype, timestamp, adjusted_ts))
                         elif CONSOLE_ARGUMENTS.jiffies:
@@ -421,7 +421,7 @@ def parse_all_edges(inputfile, outputfile, node_map, noencode):
                             output.write("{}\t{}\t{}:{}:{}:{}:{}\n".format(hashgen([srcUUID]), hashgen([dstUUID]), srcVal, dstVal, edgetype, timestamp, jiffies))
                         else:
                             output.write("{}\t{}\t{}:{}:{}:{}\n".format(hashgen([srcUUID]), hashgen([dstUUID]), srcVal, dstVal, edgetype, timestamp))
-	
+    
             if "wasInformedBy" in json_object:
                 wasInformedBy = json_object["wasInformedBy"]
                 for uid in wasInformedBy:
