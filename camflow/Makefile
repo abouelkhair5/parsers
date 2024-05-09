@@ -47,7 +47,7 @@
 	done
 
 5gcamflow-7:
-	number=30 ; while [ $$number -le 32 ] ; do \
+	number=30 ; while [ $$number -le 34 ] ; do \
 		python prepare.py -i ~/ds/camflow/30-04-2024/overlap/$$number -o preprocessed$$number.txt ; \
 		python parse.py -i preprocessed$$number.txt -B ~/ds/camflow/30-04-2024/base/base-$$number.txt -S ~/ds/camflow/30-04-2024/stream/stream-$$number.txt ; \
 		rm preprocessed$$number.txt ; \
@@ -55,7 +55,7 @@
 	done
 
 5gcamflow-8:
-	number=70 ; while [ $$number -le 79 ] ; do \
+	number=35 ; while [ $$number -le 40 ] ; do \
 		python prepare.py -i ~/ds/camflow/30-04-2024/overlap/$$number -o preprocessed$$number.txt ; \
 		python parse.py -i preprocessed$$number.txt -B ~/ds/camflow/30-04-2024/base/base-$$number.txt -S ~/ds/camflow/30-04-2024/stream/stream-$$number.txt ; \
 		rm preprocessed$$number.txt ; \
@@ -63,7 +63,7 @@
 	done
 
 5gcamflow-9:
-	number=80 ; while [ $$number -le 89 ] ; do \
+	number=41 ; while [ $$number -le 44 ] ; do \
 		python prepare.py -i ~/ds/camflow/30-04-2024/overlap/$$number -o preprocessed$$number.txt ; \
 		python parse.py -i preprocessed$$number.txt -B ~/ds/camflow/30-04-2024/base/base-$$number.txt -S ~/ds/camflow/30-04-2024/stream/stream-$$number.txt ; \
 		rm preprocessed$$number.txt ; \
@@ -71,7 +71,31 @@
 	done
 
 5gcamflow-0:
-	number=90 ; while [ $$number -le 96 ] ; do \
+	number=45 ; while [ $$number -le 49 ] ; do \
+		python prepare.py -i ~/ds/camflow/30-04-2024/overlap/$$number -o preprocessed$$number.txt ; \
+		python parse.py -i preprocessed$$number.txt -B ~/ds/camflow/30-04-2024/base/base-$$number.txt -S ~/ds/camflow/30-04-2024/stream/stream-$$number.txt ; \
+		rm preprocessed$$number.txt ; \
+		number=`expr $$number + 1` ; \
+	done
+
+5gcamflow-11:
+	number=50 ; while [ $$number -le 54 ] ; do \
+		python prepare.py -i ~/ds/camflow/30-04-2024/overlap/$$number -o preprocessed$$number.txt ; \
+		python parse.py -i preprocessed$$number.txt -B ~/ds/camflow/30-04-2024/base/base-$$number.txt -S ~/ds/camflow/30-04-2024/stream/stream-$$number.txt ; \
+		rm preprocessed$$number.txt ; \
+		number=`expr $$number + 1` ; \
+	done
+
+5gcamflow-12:
+	number=55 ; while [ $$number -le 59 ] ; do \
+		python prepare.py -i ~/ds/camflow/30-04-2024/overlap/$$number -o preprocessed$$number.txt ; \
+		python parse.py -i preprocessed$$number.txt -B ~/ds/camflow/30-04-2024/base/base-$$number.txt -S ~/ds/camflow/30-04-2024/stream/stream-$$number.txt ; \
+		rm preprocessed$$number.txt ; \
+		number=`expr $$number + 1` ; \
+	done
+
+5gcamflow-13:
+	number=60 ; while [ $$number -le 65 ] ; do \
 		python prepare.py -i ~/ds/camflow/30-04-2024/overlap/$$number -o preprocessed$$number.txt ; \
 		python parse.py -i preprocessed$$number.txt -B ~/ds/camflow/30-04-2024/base/base-$$number.txt -S ~/ds/camflow/30-04-2024/stream/stream-$$number.txt ; \
 		rm preprocessed$$number.txt ; \
